@@ -201,7 +201,7 @@ const Footer = () => {
         {/* 2. CENTER SECTION: FREEZE TIME & IMAGE */}
         <div
           data-aos="zoom-in-up"
-          className="lg:block relative w-full flex flex-col items-end mb-7.5 pointer-events-none"
+          className="hidden lg:block relative w-full flex flex-col items-end mb-7.5 pointer-events-none"
         >
           {/* Container for both words to keep them Right-Aligned */}
           <div className="w-full flex flex-col items-end">
