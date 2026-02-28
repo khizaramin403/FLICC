@@ -1,0 +1,134 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import StudioMainImg from '../assets/Images/clientsatisfaction.webp'; 
+import Button from '../components/Button'; // Aapka existing component
+
+const Contact = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="bg-white min-h-screen pt-24 pb-20 overflow-x-hidden">
+      <div className="max-w-430 mx-auto px-4 md:px-8 lg:px-15">
+        
+        {/* 1. Header Section */}
+        <div data-aos="zoom-in" className="text-center mb-16 lg:mb-24">
+          <h1 className="text-[36px] md:text-[80px] lg:text-[128px] font-medium text-black leading-none uppercase tracking-wider mb-8">
+            Connect
+          </h1>
+          <p className="max-w-3xl mx-auto text-[#1a1a1a] text-[14px] md:text-[16px] leading-6 font-normal mb-10">
+            Easily stay in touch with your team and clients through seamless communication tools. Build strong relationships and collaborate effectively for better results.
+          </p>
+
+          {/* Button and Phone Number */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <Button 
+              text="Explore Services" 
+              showDot={true} 
+              to="/services" 
+              className="bg-black text-white hover:bg-white hover:text-black border-black"
+            />
+            <a href="tel:+923001234567" className="text-[18px] md:text-[22px] font-bold text-black hover:opacity-70 transition-all">
+              +92 300 1234567
+            </a>
+          </div>
+        </div>
+
+        {/* 2. Hero Image */}
+        <div data-aos="zoom-in"
+          onClick={() => navigate('/services')}
+          className="group relative overflow-hidden rounded-[15px] md:rounded-[30px] cursor-pointer shadow-2xl mb-20 lg:mb-24"
+        >
+          <div className="w-full h-75 md:h-175 lg:h-220 overflow-hidden">
+             <img 
+               src={StudioMainImg} 
+               alt="Studio Session"
+               className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-110 group-hover:rotate-1"
+             />
+          </div>
+        </div>
+
+        {/* 3. Text Content Sections (Ab Image ke nechy) */}
+        <div className="space-y-20 lg:space-y-32 max-w-300 mb-24 lg:mb-32">
+          
+          {/* Section 01: Studio Sessions */}
+          <div data-aos="fade-right" className="space-y-6">
+            <h2 className="text-[32px] md:text-[48px] font-medium uppercase tracking-tight text-black">Studio Sessions</h2>
+            <p className="text-[#1a1a1a] text-[16px] leading-7 font-normal opacity-90 text-justify md:text-left">
+              Studio Sessions offer the ultimate controlled environment to create portraits of pure artistry and focus. Utilizing a versatile array of professional lighting, customizable backdrops, and precision equipment, this setting allows for complete creative freedom. The style eliminates variables, ensuring that all attention is directed toward the subject's expression, form, and unique character. Perfect for achieving a polished, commercial look or for crafting deeply personal and conceptual art, the studio is a blank canvas for your vision. The result is a fresh, modern aesthetic that emphasizes positivity and approachability, making it ideal for personal branding, fashion, and editorial work.
+            </p>
+          </div>
+
+          {/* Section 02: Classic Portraiture */}
+          <div data-aos="fade-right" className="space-y-6">
+            <h2 className="text-[32px] md:text-[48px] font-medium uppercase tracking-tight text-black">Classic Portraiture</h2>
+            <p className="text-[#1a1a1a] text-[16px] leading-7 font-normal opacity-90 text-justify md:text-left">
+              Classic Portraiture in the studio focuses on timeless elegance and technical perfection. Using soft, sculpting light and a neutral backdrop, this style creates a clean, powerful focus on the subject. Every detail from the pose to the expression is carefully crafted to convey grace, confidence, and sophistication. Perfect for executive headshots, professional profiles, or traditional family portraits, these images are designed to endure changing trends.
+            </p>
+          </div>
+
+          {/* Section 03: High-Key & Airy */}
+          <div data-aos="fade-right" className="space-y-6">
+            <h2 className="text-[32px] md:text-[48px] font-medium uppercase tracking-tight text-black ">High-Key & Airy</h2>
+            <p className="text-[#1a1a1a] text-[16px] leading-7 font-normal opacity-90 text-justify md:text-left">
+              High-Key & Airy sessions are designed to create images that feel bright, joyful, and utterly uplifting. By flooding the studio with clean, even light against white or light backdrops, we eliminate heavy shadows and create a soft, ethereal glow. This style is particularly effective for lifestyle photography, branding, and minimalist portraits. The result is a fresh, modern aesthetic that emphasizes positivity and approachability, making it ideal for personal branding, fashion, and editorial work.
+            </p>
+          </div>
+        </div>
+
+        {/* 4. Modern Dark Form Section (Sab se end mein) */}
+        <div className="w-full pb-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="w-full bg-[#121212] rounded-[20px] md:rounded-[40px] p-8 md:p-16 lg:p-20 shadow-2xl"
+          >
+            <h2 className="text-white text-[32px] md:text-[56px] uppercase font-bold mb-10 tracking-tighter">Get in touch</h2>
+            
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+              <div className="flex flex-col gap-4 border-b border-white/20 pb-4 focus-within:border-white transition-all">
+                <label className="text-white/50 uppercase text-[10px] tracking-[2px] font-bold">First Name</label>
+                <input type="text" placeholder="Enter First Name" className="bg-transparent text-white outline-none text-lg md:text-xl placeholder:text-white/10" required />
+              </div>
+
+              <div className="flex flex-col gap-4 border-b border-white/20 pb-4 focus-within:border-white transition-all">
+                <label className="text-white/50 uppercase text-[10px] tracking-[2px] font-bold">Last Name</label>
+                <input type="text" placeholder="Enter Last Name" className="bg-transparent text-white outline-none text-lg md:text-xl placeholder:text-white/10" />
+              </div>
+
+              <div className="flex flex-col gap-4 border-b border-white/20 pb-4 focus-within:border-white transition-all">
+                <label className="text-white/50 uppercase text-[10px] tracking-[2px] font-bold">Email Address</label>
+                <input type="email" placeholder="name@example.com" className="bg-transparent text-white outline-none text-lg md:text-xl placeholder:text-white/10" required />
+              </div>
+
+              <div className="flex flex-col gap-4 border-b border-white/20 pb-4 focus-within:border-white transition-all">
+                <label className="text-white/50 uppercase text-[10px] tracking-[2px] font-bold">Select Service</label>
+                <select className="bg-transparent text-white outline-none text-lg md:text-xl cursor-pointer appearance-none">
+                  <option className="text-black" value="studio">Studio Sessions</option>
+                  <option className="text-black" value="portrait">Classic Portraiture</option>
+                  <option className="text-black" value="airy">High-Key & Airy</option>
+                </select>
+              </div>
+
+              <div className="md:col-span-2 flex flex-col gap-4 border-b border-white/20 pb-4 focus-within:border-white transition-all">
+                <label className="text-white/50 uppercase text-[10px] tracking-[2px] font-bold">Message</label>
+                <textarea rows="4" placeholder="Enter your message" className="bg-transparent text-white outline-none text-lg md:text-xl placeholder:text-white/10 resize-none"></textarea>
+              </div>
+
+              <div className="md:col-span-2 pt-6">
+                <button type="submit" className="w-full md:w-auto px-16 py-5 bg-white text-black rounded-full font-bold uppercase tracking-[3px] text-xs hover:bg-[#e5e5e5] transition-all">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

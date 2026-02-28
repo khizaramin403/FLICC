@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+
+
+
+/* @font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/Fonts/Mona-Sans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/Fonts/Mona-Sans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+} */
+
+
+@font-face {
+    font-family: "Mona Sans";
+    src: url("./assets/Fonts/MonaSansVF[wdth,wght,opsz,ital].woff2") format("woff2");
+    font-weight: 100 900;  /* allow all weights */
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+body {
+    background: rgb(255, 255, 255);
+    color: wheat;
+    font-family: 'Mona Sans';
+}
+
+
+/* Chrome, Safari aur Opera se scrollbar hatane ke liye */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Firefox aur Edge ke liye */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Progress bar ko slider ke nechy lane ke liye */
+.services-swiper .swiper-pagination-progressbar {
+  top: auto !important;
+  bottom: 0px !important;
+  height: 2px !important;
+  /* background: rgba(255, 255, 255, 0.1) !important;  */
+  
+}
+
+/* Chalti hui line (active part) ka color */
+.services-swiper .swiper-pagination-progressbar-fill {
+  background: white !important; /* Swipe hone wali line ka color */
+}
