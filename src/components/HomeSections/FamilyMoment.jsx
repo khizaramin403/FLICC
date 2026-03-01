@@ -18,7 +18,7 @@ const FamilyMoment = () => {
         
         {/* 1. Header Section */}
         <div data-aos="zoom-in" className="text-center mb-16 lg:mb-24">
-          <h1 className="text-[36px] md:text-[80px] lg:text-[128px] font-medium text-black leading-[141px] uppercase tracking-wider mb-8 ">
+          <h1 className="text-[36px] md:text-[80px] lg:text-[128px] font-medium text-black leading-[40px] md:leading-[141px] uppercase tracking-wider mb-8 ">
             Family<br className="md:hidden" /> Moments
           </h1>
           <p className="max-w-3xl mx-auto text-[#1a1a1a] text-[14px] md:text-[16px] leading-[24px] font-normal">
